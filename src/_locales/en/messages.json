@@ -43,11 +43,11 @@
 "optionsProtectCookies": { "message": "Protect whitelisted cookies" },
 
 "optionsProtectCookiesWarning1": { 
-  "message": "<b>You can now enable Chrome's <i>Keep local data only until I quit my browser</i> - Vanilla will protect your cookies.</b>
+  "message": "<b>With this option enabled, you can now enable Chrome's <i>Keep local data only until I quit my browser</i> - Vanilla will protect your cookies.</b>
     <br/>You can find this setting in <i>Chrome, Options, Show advanced settings, Privacy - Content settings</i>."
 },
 "optionsProtectCookiesWarning2": { 
-  "message": "<b>Please make sure that you are not using <i>Keep local data only until I quit my browser</i> in Chrome, 
+  "message": "<b>With this option disabled, please make sure that you are not using <i>Keep local data only until I quit my browser</i> in Chrome, 
     otherwise all your cookies will be deleted!</b>
     <br/>You can find this setting in <i>Chrome, Options, Show advanced settings, Privacy - Content settings</i>."
 },
