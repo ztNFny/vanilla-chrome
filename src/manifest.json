@@ -22,8 +22,18 @@
   {
     "page": "background.html"
   },
-  "minimum_chrome_version": "25.0.0.0",
+  "commands": {
+      "clear-unwanted-cookies": {
+	  "suggested_key": {
+	      "default": "Ctrl+Shift+9",
+	      "mac": "Command+Shift+9"
+	  },
+	  "description": "Clear unwanted cookies",
+	  "global": true
+      }
+  },
+  "minimum_chrome_version": "28.0.0.0",
   "options_page": "options.html",
-  "permissions": [ "tabs", "http://*/*", "https://*/*", "cookies" ],
+  "permissions": [ "tabs", "http://*/*", "https://*/*", "cookies", "notifications" ],
   "content_security_policy": "script-src 'self'; object-src 'self'"
 }

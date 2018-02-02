@@ -161,6 +161,18 @@ function Option(name, defaultValue) {
   };
 }
 
+function toastNotif(notiftext) {
+  var opt = {
+    type: "basic",
+    title: "Vanilla Cookies",
+    message: notiftext,
+    iconUrl: "img/icon16.png"
+  };
+  chrome.notifications.create("vanilla-cookie-notif", opt, function (id) {
+    setTimeout(function () { chrome.notifications.clear(id, function (wasCleared) {}); }, 3000);
+  });
+}
+
 function bgStartup() {
   var version=getVersion();
   var lastVersion=myStore.get("lastVersion", "");
@@ -195,6 +207,16 @@ function bgStartup() {
 
   chrome.tabs.onUpdated.addListener(setTabIcon);
   onWhiteListChanged();
+
+  chrome.commands.onCommand.addListener(function (command) {
+    if (command == "clear-unwanted-cookies") {
+      var whiteList = getBg().whiteList;
+      if (whiteList.isEmpty()) toastNotif("whitelist is empty!");
+      else clearUnwantedCookies(whiteList, function (result) {
+        toastNotif("cookies cleared: " + result.black.length + " out of " + result.total);
+      });
+    }
+  });
 
   if (lastVersion=="") {
     // new install
