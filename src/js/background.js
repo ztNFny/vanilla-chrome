@@ -340,10 +340,10 @@ function setTabIcon(tabId, changeInfo, tab) {
 
 function showTabIcon(tabId, enable, white) {
   if (enable) {
-    chrome.browserAction.setIcon({ tabId: tabId, path: "img/"+(white?"icon32":"disabled")+".png" });
-    chrome.browserAction.show(tabId);
+    chrome.pageAction.setIcon({ tabId: tabId, path: "img/"+(white?"icon32":"disabled")+".png" });
+    chrome.pageAction.show(tabId);
   }
-  else chrome.browserAction.hide(tabId);
+  else chrome.pageAction.hide(tabId);
 }
 
 function backupProtectedCookies(callback) {
