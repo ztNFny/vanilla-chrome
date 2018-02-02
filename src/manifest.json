@@ -12,7 +12,7 @@
     "16": "img/icon16.png"
   },
   "default_locale": "en",
-  "page_action":
+  "browser_action":
   {
     "default_icon": "img/icon32.png",
     "default_title": "Vanilla",
