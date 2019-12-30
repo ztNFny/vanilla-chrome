@@ -1,7 +1,7 @@
 {
   "name": "Vanilla Cookie Manager",
   "short_name": "Vanilla",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "manifest_version": 2,
   "description": "__MSG_extDescription__",
   "icons":
@@ -12,7 +12,7 @@
     "16": "img/icon16.png"
   },
   "default_locale": "en",
-  "page_action":
+  "browser_action":
   {
     "default_icon": "img/icon32.png",
     "default_title": "Vanilla",
